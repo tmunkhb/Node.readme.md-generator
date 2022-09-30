@@ -51,19 +51,19 @@ function generateMarkdown(data) {
   ## Description
   ${data.description}
   ## Table of Contents
-  * [Installation](#installation)
-  * [Usage](#usage)
-  * [Contribution](#contribution)
-  * [Tests](#tests)
-  * [License](#license)
-  * [Questions](#questions)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Contribution](#contribution)
+  - [Test](#test)
+  - [License](#license)
+  - [Questions](#questions)
 ## Installation
 ${data.installation}
 ## Usage
 ${data.usage}
 ## Contribution
 ${data.contribution}
-## Tests
+## Test
 ${data.test}
 ## License
 ${renderLicenseSection(data.license)}

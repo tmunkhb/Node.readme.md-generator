@@ -8,7 +8,7 @@ const promptUser = () => {
         // Title
         {  
             type: 'input',
-            name: 'name',
+            name: 'title',
             message: 'What is the title of your project?',
             validate: titleInput => {
                 if (titleInput) {
@@ -38,7 +38,7 @@ const promptUser = () => {
         //Installation
         {  
             type: 'input',
-            name: 'Installation',
+            name: 'installation',
             message: 'What are the steps required to install your project?',
             validate: installationInput => {
                 if (installationInput) {
@@ -53,7 +53,7 @@ const promptUser = () => {
         //Usage
         {  
             type: 'input',
-            name: 'Usage',
+            name: 'usage',
             message: 'How is the app used?',
             validate: usageInput => {
                 if (usageInput) {
@@ -77,7 +77,7 @@ const promptUser = () => {
             type: 'list',
             name: 'license',
             message: 'Choose a license used:',
-            choices: ['Mozilla Public License 2.0", "GNU GPL License", "MIT License", "Apache License 2.0'],
+            choices: ['Mozilla Public License 2.0', 'GNU GPL License', 'MIT License', 'Apache License 2.0'],
             when: ({ confirmAbout }) => {
                 if (confirmAbout) {
                     return true;
@@ -133,10 +133,10 @@ const promptUser = () => {
 
 
 
-// TODO: Create a function to write README file
+//Function to write README file
 function writeToFile(fileName, data) {
     return new Promise((resolve, reject) => {
-        fs.writeToFile(fileName, data, err => {
+        fs.writeFile(fileName, data, err => {
             if (err) {
                 reject (err);
                 return;
@@ -145,9 +145,9 @@ function writeToFile(fileName, data) {
                 ok: true,
                 message: "File created!"
             });
-        })  ;
+        });
     });
 };
 
-// TODO: Create a function to initialize app
+//Function to initialize app
 promptUser();
