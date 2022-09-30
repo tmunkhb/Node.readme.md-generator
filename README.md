@@ -1,5 +1,8 @@
  # Node.js Challenge: Professional README Generator
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  ## Video Demonstration
+  ![image](https://user-images.githubusercontent.com/109834827/193169217-082ae297-dfd5-4bd6-974c-cce60226a9bd.png)
+
   ## Description
   Dynamically create a professional readme.md files by using node.js.
   Check out readme.md in dist to see sample readme.md.
